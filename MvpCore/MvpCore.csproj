@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>MvpCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Simon Watts</Authors>
+    <Description>MVP Passive View Framework</Description>
+  </PropertyGroup>
+
+</Project>

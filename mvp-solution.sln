@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpCore", "MvpCore\MvpCore.csproj", "{B44840C9-4100-49C9-9395-AA3FFADCB38D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeScript", "TypeScript", "{4521B1CC-2FE8-430C-8449-C402B2EB1E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterExample", "CounterExample\CounterExample.csproj", "{8C1F590F-20E6-417F-BD13-E0D04959C14E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B44840C9-4100-49C9-9395-AA3FFADCB38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44840C9-4100-49C9-9395-AA3FFADCB38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44840C9-4100-49C9-9395-AA3FFADCB38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44840C9-4100-49C9-9395-AA3FFADCB38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B44840C9-4100-49C9-9395-AA3FFADCB38D} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
+		{8C1F590F-20E6-417F-BD13-E0D04959C14E} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
+	EndGlobalSection
+EndGlobal
