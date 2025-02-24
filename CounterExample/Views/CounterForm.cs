@@ -17,12 +17,14 @@ namespace CounterExample.Views
 
         public void ShowError(string message)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(message, "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void ShowInfo(string message)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(message, "Info",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void UpdateCount(int count) => lblCount.Text = count.ToString();
