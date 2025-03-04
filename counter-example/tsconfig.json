@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "paths": {
+      "mvp-core/*": [ "../mvp-core/src/*" ]
+    },
+    "outDir": "./dist",
+    "strict": true
+  },
+  "include": [ "src/**/*" ]
+}

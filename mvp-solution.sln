@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpCore", "MvpCore\MvpCore.csproj", "{B44840C9-4100-49C9-9395-AA3FFADCB38D}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "mvp-core", "mvp-core\mvp-core.esproj", "{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "counter-example", "counter-example\counter-example.esproj", "{C6A88055-1B26-48D1-889D-8577F00F1839}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,18 @@ Global
 		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C1F590F-20E6-417F-BD13-E0D04959C14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B44840C9-4100-49C9-9395-AA3FFADCB38D} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
 		{8C1F590F-20E6-417F-BD13-E0D04959C14E} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
+		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683} = {4521B1CC-2FE8-430C-8449-C402B2EB1E75}
+		{C6A88055-1B26-48D1-889D-8577F00F1839} = {4521B1CC-2FE8-430C-8449-C402B2EB1E75}
 	EndGlobalSection
 EndGlobal

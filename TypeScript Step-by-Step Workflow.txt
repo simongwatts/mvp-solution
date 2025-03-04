@@ -1,0 +1,27 @@
+Step-by-Step Workflow
+Build Core Library
+
+bash
+Copy
+cd mvp-core
+npm install
+npm run build  # Generates dist/ with type declarations
+
+Link Core Library
+bash
+Copy
+cd mvp-core
+npm link  # Makes mvp-core available globally
+
+Link in Counter Example
+bash
+Copy
+cd counter-example
+npm link mvp-core  # Uses the linked core library
+npm install  # Install other dependencies
+
+Start Dev Server
+bash
+Copy
+cd counter-example
+npx webpack serve --open  # Auto-opens browser
