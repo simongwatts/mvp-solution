@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		TypeScript Step-by-Step Workflow.txt = TypeScript Step-by-Step Workflow.txt
 	EndProjectSection
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "mvp-core", "mvp-core\mvp-core.esproj", "{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683}"
