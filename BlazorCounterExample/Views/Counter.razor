@@ -1,0 +1,61 @@
+﻿@page "/mvp-counter"
+@using CounterCommon.Views
+@using CounterCommon.Events
+@using CounterCommon.Models
+@using CounterCommon.Presenters
+@using MvpCore.Events
+@implements ICounterView
+
+<h1>MVP Counter (WASM)</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary"
+        @onclick="IncrementCount">
+    Click me
+</button>
+
+@code {
+    private int currentCount;
+
+    [Inject] private CounterPresenter Presenter { get; set; } = default!;
+    [Inject] private CounterModel Model { get; set; } = default!;
+
+    protected override void OnInitialized()
+    {
+        Presenter.SetView(this); // Set the view for the presenter
+        currentCount = Model.Count;
+        Presenter.Initialize(); // Initialize presenter (subscribe, etc.)
+    }
+
+    public void UpdateCount(int count)
+    {
+        currentCount = count;
+        StateHasChanged();
+    }
+
+    public void ShowError(string message)
+    {
+        // Optionally implement error display for Blazor (e.g., toast, alert, etc.)
+        Console.WriteLine($"Error: {message}");
+    }
+
+    public void ShowInfo(string message)
+    {
+        // Optionally implement info display for Blazor (e.g., toast, alert, etc.)
+        Console.WriteLine($"Info: {message}");
+    }
+
+    private void IncrementCount()
+    {
+        Presenter.View?.ShowInfo("Increment requested"); // Optional info
+        Presenter.View?.ShowError(""); // Clear error if any
+        Presenter.View?.UpdateCount(currentCount); // Optional update
+        Presenter.Model.Increment(); // Use model via presenter
+    }
+
+    public void Dispose()
+    {
+        Presenter.Dispose();
+    }
+}

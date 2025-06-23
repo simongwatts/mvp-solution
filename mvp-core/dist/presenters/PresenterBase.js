@@ -1,9 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PresenterBase = void 0;
-//import { BaseModelEvent } from "../events/ModelEvent";
 const ModelEvent_1 = require("../events/ModelEvent");
-//import { BaseViewEvent } from "../events/ViewEvent";
 const ViewEvent_1 = require("../events/ViewEvent");
 class PresenterBase {
     constructor(view, model, eventBus) {

@@ -5,5 +5,4 @@ export declare class EventAggregator implements IEventPublisher {
     subscribe<T extends object>(eventType: new (...args: any[]) => T, handler: (event: T) => void): () => void;
     private unsubscribe;
     private getEventTypeHierarchy;
-    private getBaseTypes;
 }

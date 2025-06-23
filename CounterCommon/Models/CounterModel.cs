@@ -1,8 +1,8 @@
 ﻿using MvpCore.Events;
 using MvpCore.Interfaces;
-using CounterExample.Events;
+using CounterCommon.Events;
 
-namespace CounterExample.Models
+namespace CounterCommon.Models
 {
     public class CounterModel : IModel
     {
@@ -10,6 +10,8 @@ namespace CounterExample.Models
         private readonly IEventPublisher _eventBus;
 
         public CounterModel(IEventPublisher eventBus) => _eventBus = eventBus;
+
+        public int Count => _count;
 
         public void Increment()
         {

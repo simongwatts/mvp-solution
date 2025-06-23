@@ -5,4 +5,3 @@ exports.ViewEvent = void 0;
 class ViewEvent {
 }
 exports.ViewEvent = ViewEvent;
-//export class BaseViewEvent extends ViewEvent { }

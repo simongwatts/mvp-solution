@@ -1,10 +1,10 @@
 ﻿using MvpCore.Events;
 using MvpCore.Presenters;
-using CounterExample.Events;
-using CounterExample.Models;
-using CounterExample.Views;
+using CounterCommon.Events;
+using CounterCommon.Models;
+using CounterCommon.Views;
 
-namespace CounterExample.Presenters
+namespace CounterCommon.Presenters
 {
     public class CounterPresenter : PresenterBase<ICounterView, CounterModel>
     {
@@ -13,6 +13,12 @@ namespace CounterExample.Presenters
             CounterModel model,
             IEventPublisher eventBus
         ) : base(view, model, eventBus) { }
+
+        // Alternate constructor for DI scenarios where view is set later
+        public CounterPresenter(
+            CounterModel model,
+            IEventPublisher eventBus
+        ) : base(model, eventBus) { }
 
         protected override void OnViewEvent(ViewEvent @event)
         {

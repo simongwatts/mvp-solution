@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CounterCommon\CounterCommon.csproj" />
     <ProjectReference Include="..\MvpCore\MvpCore.csproj" />
   </ItemGroup>
 

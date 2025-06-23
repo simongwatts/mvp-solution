@@ -22,6 +22,10 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "mvp-core", "mvp-core\mvp-co
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "counter-example", "counter-example\counter-example.esproj", "{C6A88055-1B26-48D1-889D-8577F00F1839}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCounterExample", "BlazorCounterExample\BlazorCounterExample.csproj", "{F927EA9E-F252-DC2E-F80C-DA36DAA0F264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterCommon", "CounterCommon\CounterCommon.csproj", "{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6A88055-1B26-48D1-889D-8577F00F1839}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F927EA9E-F252-DC2E-F80C-DA36DAA0F264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F927EA9E-F252-DC2E-F80C-DA36DAA0F264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F927EA9E-F252-DC2E-F80C-DA36DAA0F264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F927EA9E-F252-DC2E-F80C-DA36DAA0F264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +69,10 @@ Global
 		{8C1F590F-20E6-417F-BD13-E0D04959C14E} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
 		{FFBF9EF9-7A5C-4CE9-A2B1-B0563CAB9683} = {4521B1CC-2FE8-430C-8449-C402B2EB1E75}
 		{C6A88055-1B26-48D1-889D-8577F00F1839} = {4521B1CC-2FE8-430C-8449-C402B2EB1E75}
+		{F927EA9E-F252-DC2E-F80C-DA36DAA0F264} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
+		{EE1E27C4-B411-4FA2-8C43-66F7DAEF1AC7} = {BFD44306-A9FA-488A-AB0B-4EE77AD8C33F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC79AED8-B24A-4EF8-8149-B9E7F688D9CD}
 	EndGlobalSection
 EndGlobal

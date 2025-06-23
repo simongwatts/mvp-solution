@@ -1,6 +1,6 @@
 ﻿using MvpCore.Events;
 
-namespace CounterExample.Events
+namespace CounterCommon.Events
 {
     public class CounterUpdatedEvent : ModelEvent
     {

@@ -1,6 +1,6 @@
 using MvpCore.Events;
-using CounterExample.Models;
-using CounterExample.Presenters;
+using CounterCommon.Models;
+using CounterCommon.Presenters;
 using CounterExample.Views;
 
 namespace CounterExample

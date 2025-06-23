@@ -45,32 +45,5 @@ class EventAggregator {
         }
         return types;
     }
-    //private getEventTypeHierarchy(event: object): string[] {
-    //    console.log("EventAggregator getEventTypeHierarchy");
-    //    const types: string[] = [];
-    //    let currentType = Object.getPrototypeOf(event);
-    //    while (currentType !== null) {
-    //        const typeName = currentType.constructor.name;
-    //        if (typeName !== 'Object') {
-    //            types.push(typeName);
-    //            types.push(...this.getBaseTypes(currentType));
-    //        }
-    //        currentType = Object.getPrototypeOf(currentType);
-    //    }
-    //    return [...new Set(types)];
-    //}
-    getBaseTypes(type) {
-        console.log("EventAggregator getBaseTypes");
-        const bases = [];
-        let currentBase = Object.getPrototypeOf(type);
-        while (currentBase && currentBase !== Object.prototype) {
-            const baseName = currentBase.constructor.name;
-            if (baseName !== 'Object') {
-                bases.push(baseName);
-            }
-            currentBase = Object.getPrototypeOf(currentBase);
-        }
-        return bases;
-    }
 }
 exports.EventAggregator = EventAggregator;

@@ -12,7 +12,7 @@ namespace MvpCore.Presenters
         where TView : class, IView
         where TModel : class, IModel
     {
-        protected readonly TView _view;
+        protected TView _view;
         protected readonly TModel _model;
         protected readonly IEventPublisher _eventBus;
         private readonly List<IDisposable> _subscriptions = new();
@@ -25,11 +25,21 @@ namespace MvpCore.Presenters
             _view = view ?? throw new ArgumentNullException(nameof(view));
             _model = model ?? throw new ArgumentNullException(nameof(model));
             _eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
-
-            Initialize();
         }
 
-        protected virtual void Initialize()
+        // Alternate constructor for DI scenarios where view is set later
+        protected PresenterBase(TModel model, IEventPublisher eventBus)
+        {
+            _model = model ?? throw new ArgumentNullException(nameof(model));
+            _eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
+        }
+
+        public void SetView(TView view)
+        {
+            _view = view;
+        }
+
+        public void Initialize()
         {
             // Subscribe to common events here
             Subscribe<ViewEvent>(OnViewEvent);

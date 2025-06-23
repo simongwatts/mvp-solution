@@ -5,4 +5,3 @@ exports.ModelEvent = void 0;
 class ModelEvent {
 }
 exports.ModelEvent = ModelEvent;
-//export class BaseModelEvent extends ModelEvent { }

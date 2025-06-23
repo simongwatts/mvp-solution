@@ -1,6 +1,6 @@
 ﻿using MvpCore.Interfaces;
 
-namespace CounterExample.Views
+namespace CounterCommon.Views
 {
     public interface ICounterView : IView
     {

@@ -1,4 +1,5 @@
-using CounterExample.Events;
+using CounterCommon.Events;
+using CounterCommon.Views;
 using MvpCore.Events;
 
 namespace CounterExample.Views
