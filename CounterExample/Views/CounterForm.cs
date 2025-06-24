@@ -13,7 +13,7 @@ namespace CounterExample.Views
             _eventBus = eventBus;
             InitializeComponent();
             btnIncrement.Click += (s, e) =>
-                _eventBus.Publish(new IncrementRequestedEvent());
+                IncrementCount();
         }
 
         public void ShowError(string message)
@@ -29,5 +29,11 @@ namespace CounterExample.Views
         }
 
         public void UpdateCount(int count) => lblCount.Text = count.ToString();
+
+        private void IncrementCount()
+        {
+            _eventBus.Publish(new IncrementRequestedEvent());
+        }
+
     }
 }

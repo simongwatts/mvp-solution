@@ -27,10 +27,9 @@
         EventBus.Publish(new ViewReadyEvent<ICounterView>(this));
     }
 
-    public void UpdateCount(int count)
+    public void Dispose()
     {
-        currentCount = count;
-        StateHasChanged();
+        EventBus.Publish(new ViewReadyEvent<ICounterView>(null));
     }
 
     public void ShowError(string message)
@@ -45,13 +44,14 @@
         Console.WriteLine($"Info: {message}");
     }
 
+    public void UpdateCount(int count)
+    {
+        currentCount = count;
+        StateHasChanged();
+    }
+
     private void IncrementCount()
     {
         EventBus.Publish(new IncrementRequestedEvent());
-    }
-
-    public void Dispose()
-    {
-        EventBus.Publish(new ViewReadyEvent<ICounterView>(null));
     }
 }
