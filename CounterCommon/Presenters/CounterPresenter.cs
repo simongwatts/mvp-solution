@@ -27,7 +27,7 @@ namespace CounterCommon.Presenters
         public override void Initialize()
         {
             base.Initialize();
-            View.UpdateCount(Model.Count);
+            UpdateView();
         }
 
         protected override void OnViewEvent(ViewEvent @event)
@@ -45,9 +45,20 @@ namespace CounterCommon.Presenters
             switch (@event)
             {
                 case CounterUpdatedEvent cue:
-                    View.UpdateCount(cue.NewCount);
+                    View?.UpdateCount(cue.NewCount);
                     break;
             }
+        }
+
+        protected override void OnViewReadyEvent(ViewReadyEvent<ICounterView> @event)
+        {
+            SetView(@event.View);
+            UpdateView();
+        }
+
+        private void UpdateView()
+        {
+            View?.UpdateCount(Model.Count);
         }
     }
 }

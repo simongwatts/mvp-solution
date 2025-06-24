@@ -5,7 +5,7 @@ namespace MvpCore.Interfaces
         where TView : IView
         where TModel : IModel
     {
-        TView View { get; }
+        TView? View { get; }
         TModel Model { get; }
     }
 }
