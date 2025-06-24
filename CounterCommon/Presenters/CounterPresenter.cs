@@ -3,6 +3,7 @@ using MvpCore.Presenters;
 using CounterCommon.Events;
 using CounterCommon.Models;
 using CounterCommon.Views;
+using System.ComponentModel.Design;
 
 namespace CounterCommon.Presenters
 {
@@ -24,18 +25,16 @@ namespace CounterCommon.Presenters
         { 
         }
 
-        public override void Initialize()
-        {
-            base.Initialize();
-            UpdateView();
-        }
-
         protected override void OnViewEvent(ViewEvent @event)
         {
             switch (@event)
             {
                 case IncrementRequestedEvent:
                     Model.Increment();
+                    break;
+                
+                default:
+                    base.OnViewEvent(@event);
                     break;
             }
         }
@@ -47,16 +46,14 @@ namespace CounterCommon.Presenters
                 case CounterUpdatedEvent cue:
                     View?.UpdateCount(cue.NewCount);
                     break;
+
+                default:
+                    base.OnModelEvent(@event);
+                    break;
             }
         }
 
-        protected override void OnViewReadyEvent(ViewReadyEvent<ICounterView> @event)
-        {
-            SetView(@event.View);
-            UpdateView();
-        }
-
-        private void UpdateView()
+        protected override void UpdateView()
         {
             View?.UpdateCount(Model.Count);
         }

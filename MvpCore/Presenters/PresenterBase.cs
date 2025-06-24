@@ -45,11 +45,26 @@ namespace MvpCore.Presenters
             Subscribe<ViewEvent>(OnViewEvent);
             Subscribe<ModelEvent>(OnModelEvent);
             Subscribe<ViewReadyEvent<TView>>(OnViewReadyEvent);
+
+            UpdateView();
         }
 
-        protected virtual void OnViewEvent(ViewEvent @event) { }
-        protected virtual void OnModelEvent(ModelEvent @event) { }
-        protected virtual void OnViewReadyEvent(ViewReadyEvent<TView> @event) { }
+        protected virtual void UpdateModel() { }
+        protected virtual void UpdateView() { }
+
+        protected virtual void OnViewEvent(ViewEvent @event) 
+        {
+            UpdateModel();
+        }
+        protected virtual void OnModelEvent(ModelEvent @event) 
+        {
+            UpdateView();
+        }
+        protected virtual void OnViewReadyEvent(ViewReadyEvent<TView> @event) 
+        {
+            SetView(@event.View);
+            UpdateView();
+        }
 
         protected void Subscribe<TEvent>(Action<TEvent> handler)
         {
