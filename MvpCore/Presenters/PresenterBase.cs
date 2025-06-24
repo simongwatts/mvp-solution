@@ -39,7 +39,7 @@ namespace MvpCore.Presenters
             _view = view;
         }
 
-        public void Initialize()
+        public virtual void Initialize()
         {
             // Subscribe to common events here
             Subscribe<ViewEvent>(OnViewEvent);

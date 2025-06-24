@@ -19,12 +19,11 @@
     private int currentCount;
 
     [Inject] private CounterPresenter Presenter { get; set; } = default!;
-    [Inject] private CounterModel Model { get; set; } = default!;
+    [Inject] private IEventPublisher EventBus { get; set; } = default!;
 
     protected override void OnInitialized()
     {
         Presenter.SetView(this); // Set the view for the presenter
-        currentCount = Model.Count;
         Presenter.Initialize(); // Initialize presenter (subscribe, etc.)
     }
 
@@ -48,10 +47,7 @@
 
     private void IncrementCount()
     {
-        Presenter.View?.ShowInfo("Increment requested"); // Optional info
-        Presenter.View?.ShowError(""); // Clear error if any
-        Presenter.View?.UpdateCount(currentCount); // Optional update
-        Presenter.Model.Increment(); // Use model via presenter
+        EventBus.Publish(new IncrementRequestedEvent());
     }
 
     public void Dispose()

@@ -12,13 +12,23 @@ namespace CounterCommon.Presenters
             ICounterView view,
             CounterModel model,
             IEventPublisher eventBus
-        ) : base(view, model, eventBus) { }
+        ) : base(view, model, eventBus) 
+        {
+        }
 
         // Alternate constructor for DI scenarios where view is set later
         public CounterPresenter(
             CounterModel model,
             IEventPublisher eventBus
-        ) : base(model, eventBus) { }
+        ) : base(model, eventBus) 
+        { 
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            View.UpdateCount(Model.Count);
+        }
 
         protected override void OnViewEvent(ViewEvent @event)
         {

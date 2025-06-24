@@ -23,6 +23,7 @@ namespace CounterExample
 
             // Instantiate presenter (ties view+model+events together)
             var presenter = new CounterPresenter(view, model, eventBus);
+            presenter.Initialize();
 
             Application.Run(view);
         }
